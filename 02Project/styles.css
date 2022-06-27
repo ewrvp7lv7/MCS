@@ -1,0 +1,36 @@
+body {
+  font-family: Arial, Helvetica, Sans-serif;
+}
+
+.header {
+  /* background: #FFE138; */
+  font-size: 50px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.block {
+  border: 1px solid #929292;
+  border-radius: 5px;
+  margin: 20px;
+  background: radial-gradient(circle, green, yellow);
+}
+
+.block p {
+  text-indent: 2em;
+  margin: 5px 20px;
+}
+
+.block img {
+  display: block;
+  object-fit: none;
+  width: 300px;
+  height: 548px;
+  margin: auto;
+}

@@ -1,0 +1,13 @@
+h1 {
+  background-color: #f1eeee;
+  padding: 50px;
+  border-bottom: 1px solid #0b24fb;
+}
+p {
+  padding: 20px 0 20px 10px;
+  margin-bottom: 50px;
+}
+em, strong {
+  background-color: #29fd2f;
+  display: inline;
+}
