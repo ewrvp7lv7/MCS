@@ -94,6 +94,7 @@ contract Test {
         }
 
         //check _candidateAddress
+
         for(uint i = 0; i < candidates.length; i++) {
             if(candidates[i] == _candidateAddress) {
 
@@ -116,11 +117,12 @@ contract Test {
         require(!revealed, "already revealed");
         require(block.timestamp >= endsAt, "too early!");
 
-        uint localVotesMaximum; //memory?
+        uint candidatesCount = candidates.length;
+        uint localVotesMaximum;
         address[] memory localWinners = new address[](candidatesCount);
         uint currentWinnersNum;
 
-        for(uint i = 0; i < candidates.length; i++) {
+        for(uint i = 0; i < candidatesCount; i++) {
             address currentCandidate = candidates[i];
             uint currentVotes = candidatesInfo[currentCandidate].votes;
 

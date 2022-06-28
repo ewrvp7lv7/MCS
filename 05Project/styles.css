@@ -9,11 +9,11 @@ body {
   background-color: #FE1A19;
   color: #ffffff;
   margin: 0px;
-  padding: 20px;
 }
 
 .red p {
   height: auto;
+  padding: 0 2em;
   font-size: 20px;
 }
 
@@ -29,10 +29,9 @@ body {
   border: 5px solid #E5E000;
   border-radius: 30px;
   flex-basis: 400px;
-  padding: 35px;
 }
 
 .strophas div p {
+  margin: 35px;
   white-space: pre-line;
-  /* margin: 0 0 35px 0; */
 }
