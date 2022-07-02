@@ -4,6 +4,50 @@
     box-sizing: border-box;
 }
 
+.page {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    background-color: #0b24fb;
+    height: 80px;
+}
+
+.header {
+    background-color: #f1eeee;
+}
+
+.content {
+    background-color: #f1eeee;
+    height: 600px;
+}
+
+.sign_up {
+    background-color: #29fd2f;
+}
+
+.feature-1 {
+    background-color: #ffffff;
+}
+
+.feature-2 {
+    background-color: #f1eeee;
+}
+
+.feature-3 {
+    background-color: #ffffff;
+}
+
+
 /* Макет для мобильных */
 @media only screen and (max-width: 400px) {
     body {
@@ -14,16 +58,38 @@
 
 /* Макет для планшетов */
 @media only screen and (min-width: 401px) and (max-width: 960px) {
-    body {
-        background-color: #f1eeee;
-        /* Серый */
+
+    .sign_up,
+    .feature-1,
+    .feature-2,
+    .feature-3 {
+        width: 50%;
     }
 }
 
 /* Макет для десктопов */
 @media only screen and (min-width: 961px) {
-    body {
-        background-color: #0b24fb;
-        /* Синий */
+    .page {
+        width: 960px;
+        margin: 0 auto;
+    }
+
+    .feature-1,
+    .feature-2,
+    .feature-3 {
+        width: 33.3%;
+    }
+
+    .header {
+        height: 400px;
+    }
+
+    .sign_up {
+        height: 200px;
+        order: 1;
+    }
+
+    .content {
+        order: 2;
     }
 }
