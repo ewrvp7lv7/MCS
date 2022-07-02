@@ -1,37 +1,104 @@
 body {
   font-family: Arial, Helvetica, Sans-serif;
+  font-size: 25px;
 }
 
-.red {
+.header {
+  position: sticky;
   display: flex;
-  align-items: center; 
-  height: 60px;
-  background-color: #FE1A19;
-  color: #ffffff;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  color: #E50043;
+  margin: 0px;
+  padding: 50px;
+  top: 0px;
+  z-index: 10;
+}
+
+
+
+.header a,
+.header p {
+  font-size: 50px;
+  color: #E50043;
   margin: 0px;
 }
 
-.red p {
-  height: auto;
-  padding: 0 2em;
-  font-size: 20px;
+.header a:hover {
+  color: #8491db;
 }
 
-.strophas {
+.gradient {
   width: auto;
+  height: 150px;
   display: flex;
   justify-content: center;
-  align-items: stretch; 
+  background: linear-gradient(white, #F8BFC7);
 }
 
-.strophas div {
-  margin: 35px;
-  border: 5px solid #E5E000;
-  border-radius: 30px;
-  flex-basis: 400px;
+.gradient img {
+  position: relative;
+  top: 36px;
 }
 
-.strophas div p {
-  margin: 35px;
-  white-space: pre-line;
+.mainpicture {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-image: url(images/evian_origins_logo.jpg);
+  background-position: center;
+  height: 754px;
+  color: #E50043;
+}
+
+.mainpicture p {
+  font-size: 100px;
+  position: relative;
+  top: 160px;
+}
+
+.generalpack {
+  margin: 200px;
+
+}
+
+.pinkborder {
+  border: 1px solid #F8BFC7;
+  border-radius: 4px;
+}
+
+.pinkborder p,
+.pinkborder img {
+  margin: 24px;
+}
+
+.pinkborder>div {
+  display: flex;
+  justify-content: space-around;
+}
+
+.bottles {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  margin: 70px 0;
+}
+
+.bottles div p {
+  text-align: center;
+}
+
+
+.footer {
+  color: #ffffff;
+  background-color: #F8BFC7;
+  margin: 0px;
+  padding: 50px;
+}
+
+.footer p {
+  margin: 0px;
+  font-size: 40px;
 }
