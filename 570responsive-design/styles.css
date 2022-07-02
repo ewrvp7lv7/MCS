@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Макет для мобильных */
+@media only screen and (max-width: 400px) {
+    body {
+        background-color: #29fd2f;
+        /* Зеленый */
+    }
+}
+
+/* Макет для планшетов */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+    body {
+        background-color: #f1eeee;
+        /* Серый */
+    }
+}
+
+/* Макет для десктопов */
+@media only screen and (min-width: 961px) {
+    body {
+        background-color: #0b24fb;
+        /* Синий */
+    }
+}
