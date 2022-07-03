@@ -48,6 +48,8 @@ body {
   align-items: flex-start;
   background-image: url(images/evian_origins_logo.jpg);
   background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   height: 754px;
   color: #E50043;
 }
@@ -73,7 +75,7 @@ body {
   margin: 24px;
 }
 
-.pinkborder>div {
+.pinkborder-flex {
   display: flex;
   justify-content: space-around;
 }
