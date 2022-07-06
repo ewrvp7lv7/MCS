@@ -29,7 +29,7 @@ body {
 
 .block img {
   display: block;
-  object-fit:cover;
+  object-fit: none;
   width: 300px;
   height: 548px;
   margin: auto;
