@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8' />
+  <title>Отступы</title>
+  <link rel='stylesheet' href='typo.css' />
+  <style>
+    .paragraph-indent p {
+      text-indent: 1em;
+      margin-bottom: 0;
+    }
+    /* У первого абзаца после заголовка не должно быть отступа */
+    .paragraph-indent p:first-of-type {
+      text-indent: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href='web-fonts.html'>Веб-шрифты</a></li>
+        <li><a href='external-fonts.html'>Внешние шрифты</a></li>
+        <li class='selected'>Отступы</li>
+        <li><a href='alignment.html'>Выравнивание</a></li>
+        <li><a href='spacing.html'>Спэйсинг</a></li>
+        <li><a href='line-length.html'>Длина строки</a></li>
+      </ul>
+    </nav>
+    <div class='hero'>
+      <h1>Абзацные отступы</h1>
+    </div>
+  </header>
+
+  <div class='page'>
+
+    <section class='section section--blue paragraph-indent'>
+      <h2>Абзацные отступы</h2>
+
+      <p>Свойство <code>text-indent</code> определяет размер отступа первой строки конкретного элемента.</p>
+      <p>Свойство <code>text-indent</code> определяет размер отступа первой строки конкретного элемента.</p>
+
+    </section>
+
+    <section class='section section--blue'>
+      <h2>Или марждины</h2>
+
+      <p>Для обозначения нового параграфа также можно использовать <code>bottom-margin</code>.</p>
+      <p>Для обозначения нового параграфа также можно использовать <code>bottom-margin</code>.</p>
+
+    </section>
+
+    <section class='section section--red never-both'>
+      <h2>Никогда не используйте их вместе!</h2>
+
+      <p>Читателям не нужны два оповещения о том, что начинается новый абзац, поэтому не стоит использовать их
+        одновременно – это перебор.</p>
+
+    </section>
+
+  </div>
+
+</body>
+
+</html>

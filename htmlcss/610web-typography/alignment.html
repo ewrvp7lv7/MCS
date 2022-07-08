@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8' />
+  <title>Выравнивание текста</title>
+  <link rel='stylesheet' href='typo.css' />
+  <style>
+    .left {
+      text-align: left;
+    }
+
+    .center {
+      text-align: center;
+    }
+    .justify {
+  text-align: justify;
+}
+
+    figcaption {
+      display: none;
+    }
+
+    @media only screen and (min-width: 900px) {
+      figure {
+        position: relative;
+      }
+
+      figcaption {
+        display: block;
+
+        font-style: italic;
+        text-align: right;
+        background-color: #FFFFFF;
+
+        position: absolute;
+        left: -220px;
+        width: 200px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href='web-fonts.html'>Веб-шрифты</a></li>
+        <li><a href='external-fonts.html'>Внешние шрифты</a></li>
+        <li><a href='indents.html'>Отступы</a></li>
+        <li class='selected'>Выравнивание</li>
+        <li><a href='spacing.html'>Спэйсинг</a></li>
+        <li><a href='line-length.html'>Длина строки</a></li>
+      </ul>
+    </nav>
+    <div class='hero'>
+      <h1>Выравнивание</h1>
+    </div>
+  </header>
+
+  <div class='page'>
+
+    <section class='section section--gray left'>
+      <h2>Выравнивание по левому краю</h2>
+
+      <p>Для удобства чтения текста большая его часть должна быть выровнена по левому краю. А длинные фрагменты текста
+        почти во всех случаях должны быть выровнены именно так.</p>
+
+    </section>
+
+    <section class='section section--gray center'>
+      <h2>Выравнивание по центру</h2>
+
+      <p>В выровненном по центру тексте при переходе к следующей строке взгляду легче потеряться.</p>
+
+    </section>
+
+    <section class='section section--gray'>
+      <h2>Выравнивание по правому краю</h2>
+
+      <p>Как и с центрированием текста, выравнивание по правому краю следует применять только в особый случаях, потому
+        что его неровный левый край затрудняет читателю поиск следующей строки.</p>
+
+    </section>
+
+    <section class='section section--gray justify'>
+
+      <h2>Строки с одинаковой шириной</h2>
+
+      <p>Строки с одинаковой шириной создаются с помощью тонкого регулирование пространства между словами и буквами.
+        Без качественной системы автопереноса расстояния между словами становятся слишком большими, и текст становится
+        труднее читать.
+        К сожалению, у большинства браузеров отсутствует встроенная система автопереносов, поэтому лучше избегать строк
+        с одинаковой шириной.
+      </p>
+
+    </section>
+
+  </div>
+
+</body>
+
+</html>

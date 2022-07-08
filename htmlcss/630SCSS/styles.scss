@@ -1,0 +1,60 @@
+@use "sass:list";
+$border-num: (23px 1px 56px 52px);
+
+
+
+header {
+  h1 {
+    background-color: #0000FF;
+    border: list.nth($border-num, 2);
+
+    span {
+      color: aqua;
+    }
+  }
+
+  h1 {
+    background-color: #a70791;
+  }
+
+  h1,
+  h2 {
+    font-size: large;
+  }
+
+  > {
+    time {
+      font-weight: 300;
+    }
+
+    h1 {
+      background-color: #a70791;
+    }
+  }
+}
+
+a {
+  &:hover {
+    background-color: #a70791;
+
+  }
+
+  &:active {
+    background-color: #a70791;
+
+  }
+}
+
+//global variable
+$font-st:normal;
+
+style1 {
+  & &_style2 {
+    font-style: $font-st;
+
+  }
+
+  font-weight: 300;
+}
+
+@debug 1px == 1px;
