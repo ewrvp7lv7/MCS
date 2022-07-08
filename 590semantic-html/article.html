@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Семантическая верстка</title>
+</head>
+
+<body>
+
+  <header>
+    <h1>Moscow Coding School</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Главная</a></li>
+        <li><a href="#">О нас</a></li>
+        <li><a href="#">Блог</a></li>
+        <li><a href="#">Подписаться</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <!-- Добавим это -->
+    <h2>Схема документа</h2>
+    <p>В HTML5 есть несколько секционных элементов, которые влияют на схему документа.</p>
+
+
+    <figure>
+      <img src="images/content.svg" alt="Диаграмма, показывающая подпись у <article>, <section>, и <nav>." />
+      <figcaption>Диаграмма, показывающая подпись у <article>, <section>, и <nav>.</figcaption>.
+    </figure>
+
+    <h3>Хэдеры</h3>
+    <p>Элемент <code><header></code> является одним из секционных элементов.</p>
+
+    <h3>Футеры</h3>
+    <p>Элемент <code><footer></code> тоже секционный.</p>
+  </section> <!-- Добавим это -->
+
+  <section>
+    <!-- Добавим это -->
+    <h6>Строчная семантическая верстка</h6>
+    <p>Элемент <code><time></code> является семантическим, но при этом он не секционный.</p>
+  </section> <!-- Добавим это -->
+
+  <p>Это было написано кем-то из Moscow Coding School.</p>
+
+  <article>
+    <header>
+      <h1>Семантическая верстка</h1>
+      <p>Moscow Coding School. Опубликовано <time datetime="2020-12-5">5-ого декабря</time></p>
+    </header>
+    <!-- Бутафорская реклама -->
+    <aside class="advert">
+      <img src="images/photo-small.jpg" />
+    </aside>
+    <p>Это пример веб-страницы, на которой рассказывается про семантическую верстку.</p>
+    <!-- ... -->
+
+    <footer>
+      <!-- Добавим это -->
+      <p>Это было написано кем-то из Moscow Coding School. Этот футер предназначен только для
+        элемента <code><article></code>.</p>
+    </footer> <!-- Добавим это -->
+  </article>
+
+  <article>
+    <h1>Первый пост</h1>
+    <p>Контент</p>
+  </article>
+
+  <article>
+    <h1>Второй пост</h1>
+    <p>Еще немного контента</p>
+    <h2>Подраздел</h2>
+    <p>Пояснения</p>
+  </article>
+
+  <article>
+    <h1>Последний пост</h1>
+    <p>Финальная часть контента</p>
+  </article>
+
+  <footer>
+    <!-- И это -->
+    <p>2020 Moscow Coding School</p>
+    <address>
+       Можете связаться с нами тут <a href="mailto:mcs@example.com">Moscow Coding School</a>.
+    </address>
+  </footer> <!-- Не забудем закрыть тут -->
+  <aside class="sidebar">
+    <h2>Сайдбар</h2>
+    <p>Контент для сайдбара</p>
+    <nav>
+      <h3>Верстка на HTML и CSS</h3>
+      <ul>
+        <li><a href="#">Введение</a></li>
+        <li><a href="#">Базовые веб-страницы</a></li>
+        <li><a href="#">И так далее...</a></li>
+      </ul>
+    </nav>
+    <nav>
+      <h3>Курс JavaScript</h3>
+      <ul>
+        <li><a href="#">Введение</a></li>
+        <li><a href="#">Привет, JavaScript</a></li>
+        <li><a href="#">И так далее...</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+</body>
+
+</html>
