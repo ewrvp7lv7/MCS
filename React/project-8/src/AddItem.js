@@ -1,54 +1,63 @@
 import React from "react";
 import styled from "styled-components";
+import { buttonStyles } from "./globalstyle";
+
+const TextField = styled.input`
+padding: 12px 10px;
+border-radius: 3px;
+border: 1px solid var(--light-gray);
+font-size: 16px;
+  margin: 10px;
+`;
+
+
+//ui-button 
+const AddInput = styled.input`
+  ${buttonStyles}
+`;
+
+const AddButton = styled.button`
+  ${buttonStyles}
+min-width: 100px;
+font-size: 0.8em;
+  `;
+
 
 export default function AddItem(props) {
-  // const Button1 = styled.button`
-  //   font-size: 18px;
-  //   padding: 10px;
-  //   margin: 10px;
-  //   background: papayawhip;
-  //   border: none;
-  //   border-radius: 3px;
-  //   ::placeholder {
-  //     color: palevioletred;
-  //   }
-  // `;
 
   return (
     <form onSubmit={props.onFormSubmit}>
       <div>
         <label htmlFor="item-name">Название:</label>
-        <input
+        <TextField
           type="text"
           value={props.name}
           onChange={props.onNameChange}
           id="item-name"
           placeholder="Название товара"
-          className="textfield"
         />
       </div>
       <div>
         <label htmlFor="item-description">Описание:</label>
-        <input
+        <TextField
           type="text"
           value={props.desc}
           onChange={props.onDescChange}
           id="item-description"
           placeholder="Описание товара"
-          className="textfield"
         />
       </div>
       <div className="form-footer">
         <div className="validation">{props.valid}</div>
-        <input type="submit" className="btn btn-basic" value="Добавить" />
+        <AddInput type="submit" className="btn btn-basic" value="Добавить" />
       </div>
-      <button
+      <AddButton
         type="button"
         className="btn btn-basic"
         onClick={props.onFillFields}
       >
         Заполнить
-      </button>
+      </AddButton>
     </form>
   );
 }
