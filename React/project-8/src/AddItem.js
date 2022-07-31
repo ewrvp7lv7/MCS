@@ -1,36 +1,25 @@
 import React from "react";
-import styled from "styled-components";
-import { buttonStyles } from "./globalstyle";
+import * as styled from "./Styled";
+import { StyledButton } from "./StyledButton";
 
-const TextField = styled.input`
-padding: 12px 10px;
-border-radius: 3px;
-border: 1px solid var(--light-gray);
-font-size: 16px;
-  margin: 10px;
-`;
-
-
-//ui-button 
-const AddInput = styled.input`
-  ${buttonStyles}
-`;
-
-const AddButton = styled.button`
-  ${buttonStyles}
-min-width: 100px;
-font-size: 0.8em;
-  `;
-
+function Warning(props) {
+  if (props.valid.length > 0)
+    return (
+      <div>
+        <styled.StP>{props.valid}</styled.StP>
+      </div>
+    );
+  else return null;
+}
 
 export default function AddItem(props) {
-
   return (
-    <form onSubmit={props.onFormSubmit}>
+    <form onSubmit={props.onFormSubmit} autoComplete="off">
       <div>
         <label htmlFor="item-name">Название:</label>
-        <TextField
+        <styled.TextField
           type="text"
+          color="--primary"
           value={props.name}
           onChange={props.onNameChange}
           id="item-name"
@@ -39,8 +28,9 @@ export default function AddItem(props) {
       </div>
       <div>
         <label htmlFor="item-description">Описание:</label>
-        <TextField
+        <styled.TextField
           type="text"
+          color="--primary"
           value={props.desc}
           onChange={props.onDescChange}
           id="item-description"
@@ -48,16 +38,19 @@ export default function AddItem(props) {
         />
       </div>
       <div className="form-footer">
-        <div className="validation">{props.valid}</div>
-        <AddInput type="submit" className="btn btn-basic" value="Добавить" />
+        <Warning valid={props.valid} />
+        <StyledButton color="--primary" type="submit">
+          Добавить
+        </StyledButton>
       </div>
-      <AddButton
+      <StyledButton
+        color="--primary"
+        size="small"
         type="button"
-        className="btn btn-basic"
         onClick={props.onFillFields}
       >
         Заполнить
-      </AddButton>
+      </StyledButton>
     </form>
   );
 }

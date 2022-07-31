@@ -1,25 +1,9 @@
 import React, { useState, useEffect } from "react";
-import styled from "styled-components";
-import GlobalStyles from "./globalstyle";
+import GlobalStyles, * as styled from "./Styled";
 //import "./index.css";
 import ItemsList from "./ItemsList";
 import AddItem from "./AddItem";
 import uuid from "react-uuid";
-
-//ui-link
-const AddTitle = styled.div`
-  text-decoration: none;
-  color: var(--primary);
-`;
-
-
-
-//.ui-container {
-const Container = styled.div`
-  padding-top: 5px;
-  width: 100vw;
-  margin: 0 auto;
-`;
 
 export default function Shop() {
   const [items, setItems] = useState(() => {
@@ -36,8 +20,6 @@ export default function Shop() {
     document.title =
       items.length === 0 ? `Товары отсутствуют` : `${items.length} товаров`;
   }, [items]);
-
-
 
   function handleFormSubmit(event) {
     event.preventDefault();
@@ -81,7 +63,7 @@ export default function Shop() {
   }
 
   return (
-    <Container>
+    <styled.Container>
       <GlobalStyles />
       <AddItem
         name={name}
@@ -92,8 +74,10 @@ export default function Shop() {
         onFormSubmit={handleFormSubmit}
         onFillFields={fillFields}
       />
-      <AddTitle>{items.length === 0 && <p>Добавьте первый товар</p>}</AddTitle>
+      <styled.AddTitle>
+        {items.length === 0 && <p>Добавьте первый товар</p>}
+      </styled.AddTitle>
       <ItemsList items={items} onDeleteClick={handleDeleteClick} />
-    </Container>
+    </styled.Container>
   );
 }
