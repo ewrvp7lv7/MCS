@@ -34,7 +34,7 @@ export default function Shop() {
     }
     setItems([
       {
-        id: items.length + 1,
+        id: items.length === 0 ? 1 : Math.max(...items.map((o) => o.id)) + 1,
         name: name,
         desc: desc
       },
@@ -47,10 +47,12 @@ export default function Shop() {
 
   function handleNameChange(event) {
     setName(event.target.value);
+    setValid("");
   }
 
   function handleDescChange(event) {
     setDesc(event.target.value);
+    setValid("");
   }
 
   function handleDeleteClick(id) {
